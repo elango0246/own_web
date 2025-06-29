@@ -4,51 +4,106 @@ const projects = [
         id: 1,
         title: "Spine Like-Robotic Arm",
         thumbnail: "Img/Spine_Arm/Thumb.jpeg",
-        description: "A Spine like Robotic Arm made with esp8266 and flexcible resistor cotrol by human .",
+        description: "A spine-like robotic arm is a type of bio-inspired robotic manipulator that mimics the structure and movement of a vertebrate spine. Unlike traditional robotic arms with rigid joints and limited degrees of freedom, this design incorporates a series of interconnected flexible segments or vertebrae, allowing for smooth, continuous, and adaptive motion.Each segment is capable of bending in multiple directions, enabling the arm to move with a high degree of freedom. These arms are often driven by tendons, pneumatic actuators, or shape-memory materials, and are controlled using advanced algorithms that calculate the required bending for precise positioning. The arm behaves like a continuum—similar to an elephant’s trunk, a snake, or the human spinal column—making it ideal for navigating confined, curved, or sensitive environments.Due to their flexibility, adaptability, and compliance, spine-like robotic arms are widely used in fields such as minimally invasive surgery, search and rescue, underwater inspection, and space exploration. Their ability to handle delicate objects and operate in complex terrains makes them highly valuable in both industrial and research applications",
         videos: [
             "img/Spine_Arm/Arm.mp4"
         ],
         images: [   
             "Img/Spine_Arm/1.jpg",
             "Img/Spine_Arm/b.jpg",
-            "https://via.placeholder.com/600x400?text=Circuit+Diagram",
-            "Img/Spine_Arm/1.jpg"
+            "Img/Spine_Arm/c.jpg",
+            "Img/Spine_Arm/d.jpg",
+            "Img/Spine_Arm/e.jpg"
             
             
             
         ],
         captions: [  // Add matching captions
-            "Initial circuit setup",
-            "Main component wiring",
-            "Final assembled project",
-            "Close-up of sensor module",  // New caption
-            "Mobile app interface"       // New caption
+            "Full Modal",
+            "Remote ",
+            "Spine Link ",
+            "Spine dimensions ",  // New caption
+            "Dimensions"       // New caption
         ],
         steps: [
-            "Assembled the Arduino Mega with required shields",
-            "Connected sensors (temperature, motion, light)",
-            "Developed the control logic in Arduino C",
-            "Built companion Android app",
-            "Integrated with WiFi module for remote control"
+            "Assembled the Recevier Esp8266 with Servo shields",
+            "Connected Servo motor to the servo shield",
+            "Upload the Reciver code to the reciver esp board using Arduino",
+            "Assembled the Transimeter Esp8266 with Gyroscope and Flexible resistor",
+            "Upload the Reciver code to the reciver esp board using Arduino",
+            "Give the seprate voltage for the two boards",
+            "And now wear the band in your Hand and you control the Arm"
         ],
         components: [
-            "Arduino Mega",
-            "DHT22 Temperature Sensor",
-            "PIR Motion Sensor",
-            "Relay Module",
-            "ESP8266 WiFi Module"
+
+            "Recevier ESP8266",
+            "Servo motor (MG996R -2)",
+            "Gripper (gear and rack mechanism)",
+            "9G Servo for Gripper", 
+            "Power supply(12v and 1A) for robotic arm",
+            "ESP NOW", 
+            "Transimeter ESP8266",
+            "Flexible resistor", 
+            "Gyroscope (MPU6050)", 
+            "Power supply (3.7V and 800mah battery)"
         ],
-        category: "arduino",
-        tags: ["home automation", "iot", "sensors"],
-        date: "2023-05-15",
-        codeLink: "https://github.com/example/arduino-smart-home",
-        videoLink: "https://youtube.com/example/arduino-smart-home"
+        category: "arm",
+        tags: ["Arm Robot", "essp8266", "servo"],
+        date: "2025-05-01",
+        codeLink: "https://github.com/elango0246/san_arm_servo",
+        videoLink: "https://youtu.be/qESntJM0zZ4"
     },
     {
         id: 2,
-        title: "ESP32 Weather Station",
-        thumbnail: "https://via.placeholder.com/300x180?text=ESP32+Weather",
-        description: "IoT weather station that collects temperature, humidity, and pressure data and sends it to a cloud dashboard.",
+        title: "Small Cnc-2d plotter",
+        thumbnail: "Img/cnc_my/thumb.jpeg",
+        description: "A small cnc 2d plotter made with the old dvd drive shield with small screw stepper motor and conected with aduino cnc shield and operated bu UGS G code uploder to the arduino board .",
+        
+        images: [ 
+            "Img/cnc_my/thumb.jpeg" ,
+            "Img/cnc_my/1.jpg",
+            
+            
+            
+            
+        ],
+        captions: [ 
+            "Full Modal", // Add matching captions
+            "OUTPUT",      // New caption
+        ],
+        steps: [
+            "Assembled the Recevier Esp8266 with Servo shields",
+            "Connected Servo motor to the servo shield",
+            "Upload the Reciver code to the reciver esp board using Arduino",
+            "Assembled the Transimeter Esp8266 with Gyroscope and Flexible resistor",
+            "Upload the Reciver code to the reciver esp board using Arduino",
+            "Give the seprate voltage for the two boards",
+            "And now wear the band in your Hand and you control the Arm"
+        ],
+        components: [
+
+            "Recevier ESP8266",
+            "Servo motor (MG996R -2)",
+            "Gripper (gear and rack mechanism)",
+            "9G Servo for Gripper", 
+            "Power supply(12v and 1A) for robotic arm",
+            "ESP NOW", 
+            "Transimeter ESP8266",
+            "Flexible resistor", 
+            "Gyroscope (MPU6050)", 
+            "Power supply (3.7V and 800mah battery)"
+        ],
+        category: "arm",
+        tags: ["Arm Robot", "essp8266", "servo"],
+        date: "2025-05-01",
+        codeLink: "https://github.com/elango0246/san_arm_servo",
+        videoLink: "https://youtu.be/qESntJM0zZ4"
+    },
+    {
+        id: 2,
+        title: "",
+        thumbnail: "",
+        description: "A small cnc 2d plotter made with the old dvd drive shield with small screw stepper motor and conected with aduino cnc shield and operated bu UGS G code uploder to the arduino board .",
         videos: [
             "https://example.com/videos/esp32-weather.mp4"
         ],
@@ -611,6 +666,26 @@ function openProjectModal(project) {
     
         galleryItem.appendChild(img);
         galleryItem.appendChild(caption);
+
+        
+        galleryItem.addEventListener('click', (e) => {
+            e.preventDefault(); // Stop default click behavior
+    
+    // Clear previous content
+            document.querySelector('.main-media').innerHTML = '';
+    
+    // Create new image preview
+            const mainImg = document.createElement('img');
+             mainImg.src = image;
+            mainImg.alt = project.captions[index] || project.title;
+            mainImg.className = 'main-preview-image';
+    
+    // Add to display area
+            document.querySelector('.main-media').appendChild(mainImg);
+    
+    // Hide video if visible
+            if (videoElement) videoElement.style.display = 'none';
+        });
     
         galleryItem.addEventListener('click', () => {
         // Click handler code remains the same

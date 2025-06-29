@@ -293,6 +293,26 @@ a {
     font-weight: 500;
 }
 
+/* Image Preview Styles */
+.main-media {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-preview-image {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    object-fit: contain;
+}
+
 /* Sidebar Widgets */
 .sidebar-widget {
     margin-bottom: 2rem;
@@ -415,6 +435,34 @@ a {
     width: 100%;
     max-height: 500px;
     background: #000;
+}
+/* Circular Logo Styles */
+.logo-container {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  z-index: 101;
+}
+
+.circle-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.circle-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Adjust navbar to accommodate logo */
+.navbar {
+  padding-left: 80px; /* Make space for logo */
+  position: relative;
 }
 
 /* [PASTE THIS NEW CODE] */
