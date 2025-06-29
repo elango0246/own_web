@@ -438,10 +438,19 @@ function createProjectCard(project) {
             <span class="project-category">${formatCategory(project.category)}</span>
         </div>
     `;
-    
-    projectCard.addEventListener('click', () => openProjectModal(project));
+
+    projectCard.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeModal();
+        openProjectModal(project);
+    });
+
     return projectCard;
 }
+
+ 
+
+
 
 // Format category for display
 function formatCategory(category) {
@@ -620,11 +629,26 @@ function openProjectModal(project) {
     
     // Load videos
     const videoElement = document.getElementById('projectVideo');
+    
     if (project.videos && project.videos.length > 0) {
+        videoElement.pause();  // Stop previous playback
         videoElement.src = project.videos[0];
+        videoElement.load();   // Reload video
         videoElement.style.display = 'block';
     } else {
+        videoElement.pause();
+        videoElement.removeAttribute('src'); // Clear old video
+        videoElement.load();
         videoElement.style.display = 'none';
+    }
+
+    // Clear and restore main-media with video by default
+    const mainMedia = document.querySelector('.main-media');
+    mainMedia.innerHTML = ''; // Clear previous content
+
+    if (videoElement.style.display === 'block') {
+        const videoClone = videoElement.cloneNode(true);
+        mainMedia.appendChild(videoClone);
     }
     
     // Load steps
@@ -701,8 +725,23 @@ function openProjectModal(project) {
 
 // Close modal
 function closeModal() {
+    // Hide modal and enable scrolling
     projectModal.style.display = 'none';
     document.body.style.overflow = 'auto';
+
+    // ✅ Reset video
+    const videoElement = document.getElementById('projectVideo');
+    if (videoElement) {
+        videoElement.pause();
+        videoElement.removeAttribute('src');
+        videoElement.load();
+    }
+
+    // ✅ Clear main preview media (image or video)
+    const mainMedia = document.querySelector('.main-media');
+    if (mainMedia) {
+        mainMedia.innerHTML = '';
+    }
 }
 
 // Show specific section
