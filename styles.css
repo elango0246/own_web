@@ -177,6 +177,33 @@ a {
     margin: 5px;
     transition: all 0.3s ease;
 }
+/* Recent Projects Section */
+#recent {
+    background: #f8f9fa;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+#recent .section-title {
+    color: #4285f4;
+}
+
+#recent .project-card {
+    border: 2px solid #4285f4;
+}
+
+.social-links a {
+    margin: 0 6px;
+    font-size: 20px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffcc00;
+}
+
 
 /* Main Content Layout */
 .main-content {

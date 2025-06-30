@@ -4,6 +4,7 @@ const projects = [
         id: 1,
         title: "Spine Like-Robotic Arm",
         thumbnail: "Img/Spine_Arm/Thumb.jpeg",
+        recent: true,
         description: "A spine-like robotic arm is a type of bio-inspired robotic manipulator that mimics the structure and movement of a vertebrate spine. Unlike traditional robotic arms with rigid joints and limited degrees of freedom, this design incorporates a series of interconnected flexible segments or vertebrae, allowing for smooth, continuous, and adaptive motion.Each segment is capable of bending in multiple directions, enabling the arm to move with a high degree of freedom. These arms are often driven by tendons, pneumatic actuators, or shape-memory materials, and are controlled using advanced algorithms that calculate the required bending for precise positioning. The arm behaves like a continuum—similar to an elephant’s trunk, a snake, or the human spinal column—making it ideal for navigating confined, curved, or sensitive environments.Due to their flexibility, adaptability, and compliance, spine-like robotic arms are widely used in fields such as minimally invasive surgery, search and rescue, underwater inspection, and space exploration. Their ability to handle delicate objects and operate in complex terrains makes them highly valuable in both industrial and research applications",
         videos: [
             "img/Spine_Arm/Arm.mp4"
@@ -103,12 +104,14 @@ const projects = [
         {
         id: 3,
         title: "cnc 2d plotter",
-        thumbnail: "Img/cnc_san/thumb.jpeg",
+        thumbnail: "Img/cnc_san/thumb.jpg",
         description: "A small cnc 2d plotter made with the old dvd drive shield with small screw stepper motor and conected with aduino cnc shield and operated bu UGS G code uploder to the arduino board .",
-        
+        videos: [
+            "img/cnc_san/v1.mp4"
+        ],
         images: [ 
-            "Img/cnc_my/thumb.jpeg" ,
-            "Img/cnc_my/1.jpg",
+            
+            "Img/cnc_san/1.jpg",
             
             
             
@@ -116,7 +119,7 @@ const projects = [
         ],
         captions: [ 
             "Full Modal", // Add matching captions
-            "OUTPUT",      // New caption
+            
         ],
         steps: [
             "Using the old dvd drive shield",
@@ -143,7 +146,57 @@ const projects = [
         ],
         category: "cnc",
         tags: ["cnc", "arduino", "plotter"],
-        date: "2023-04-02",
+        date: "2023-05-10",
+        codeLink: "",
+        videoLink: ""
+    },
+            {
+        id: 4,
+        title: "Rc Car with Esp8266",
+        thumbnail: "Img/car/thumb.jpg",
+        description: "A small rc car made with esp32 with 4 motor and motor driver and controlled by the esp now and operated by the esp now remote with the esp8266.",
+        videos: [
+            "img/car/v1.mp4"
+        ],
+        images: [ 
+            
+            "Img/car/thumb.jpg",
+            
+            
+            
+            
+        ],
+        captions: [ 
+            "Full Modal", // Add matching captions
+            
+        ],
+        steps: [
+            "using the esp32 with the motor driver",
+            "Assembled the r motor with the shield",
+            "Connected the shield to the esp32",
+            "Upload the code to the esp32 board using Arduino IDE",
+            
+            "Open the esp now remote",
+            "Select the esp now remote to connect",
+            "Upload the esp now remote code to the esp8266 board", 
+            "And now you can see the output in the rc car"
+        ],
+        components: [
+
+            "ESP32 Dev Board",
+            "Motor Driver (L298N)",
+            "4 DC Motors",
+            "Power supply (9v and 1A) for rc car", 
+            "ESP Now Remote",
+            "ESP8266 NodeMCU", 
+            "Arduino IDE",
+            "ESP Now Library", 
+            "ESP Now Blink remote", 
+            ""
+        ],
+        category: "esp32",
+        tags: ["car", "esp32", "rc car"],
+        date: "2024-06-01",
         codeLink: "",
         videoLink: ""
     },
@@ -213,7 +266,7 @@ const projects = [
         date: "2023-03-22",
         codeLink: "https://github.com/example/pico-datalogger",
         videoLink: "https://youtube.com/example/pico-datalogger"
-    },*/
+    },
     {
         id: 4,
         title: "CNC Router Controller",
@@ -246,7 +299,7 @@ const projects = [
         date: "2023-02-18",
         codeLink: "https://github.com/example/cnc-controller",
         videoLink: "https://youtube.com/example/cnc-controller"
-    },
+    },*/
     {
         id: 5,
         title: "IoT Plant Monitor",
@@ -312,6 +365,7 @@ const projects = [
         codeLink: "https://github.com/example/arduino-python",
         videoLink: "https://youtube.com/example/arduino-python"
     },
+    /*
     {
         id: 7,
         title: "Electronics Basics Tutorial",
@@ -376,7 +430,7 @@ const projects = [
         date: "2022-10-15",
         codeLink: "https://github.com/example/esp8266-webserver",
         videoLink: "https://youtube.com/example/esp8266-webserver"
-    },
+    },*/
     {
         id: 9,
         title: "Miscellaneous Experiments",
