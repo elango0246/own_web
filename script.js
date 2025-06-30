@@ -55,7 +55,7 @@ const projects = [
     },
     {
         id: 2,
-        title: "Small Cnc-2d plotter",
+        title: "Small 2d plotter",
         thumbnail: "Img/cnc_my/thumb.jpeg",
         description: "A small cnc 2d plotter made with the old dvd drive shield with small screw stepper motor and conected with aduino cnc shield and operated bu UGS G code uploder to the arduino board .",
         
@@ -72,36 +72,85 @@ const projects = [
             "OUTPUT",      // New caption
         ],
         steps: [
-            "Assembled the Recevier Esp8266 with Servo shields",
-            "Connected Servo motor to the servo shield",
-            "Upload the Reciver code to the reciver esp board using Arduino",
-            "Assembled the Transimeter Esp8266 with Gyroscope and Flexible resistor",
-            "Upload the Reciver code to the reciver esp board using Arduino",
-            "Give the seprate voltage for the two boards",
-            "And now wear the band in your Hand and you control the Arm"
+            "Using the old dvd drive shield",
+            "Assembled the stepper motor with the shield",
+            "Connected the shield to the arduino cnc shield",
+            "Upload the code to the arduino board using Arduino IDE",
+            "Open the UGS G code uploader",
+            "Select the G code file to upload",
+            "Upload the G code to the arduino board",
+            "And now you can see the output in the cnc machine" 
         ],
         components: [
 
-            "Recevier ESP8266",
-            "Servo motor (MG996R -2)",
-            "Gripper (gear and rack mechanism)",
-            "9G Servo for Gripper", 
-            "Power supply(12v and 1A) for robotic arm",
-            "ESP NOW", 
-            "Transimeter ESP8266",
-            "Flexible resistor", 
-            "Gyroscope (MPU6050)", 
-            "Power supply (3.7V and 800mah battery)"
+            "Arduino Uno",
+            "CNC Shield",
+            "Stepper Motor ",
+            "Power supply(12v and 1A) for cnc machine", 
+            "UGS G code uploader",
+            "Old DVD Drive Shield", 
+            "Small Screw Stepper Motor",
+            "Arduino CNC Shield", 
+            "Aduino IDE", 
+            "G code file"
         ],
-        category: "arm",
-        tags: ["Arm Robot", "essp8266", "servo"],
-        date: "2025-05-01",
-        codeLink: "https://github.com/elango0246/san_arm_servo",
-        videoLink: "https://youtu.be/qESntJM0zZ4"
+        category: "cnc",
+        tags: ["cnc", "arduino", "plotter"],
+        date: "2023-04-02",
+        codeLink: "",
+        videoLink: ""
     },
-    {
-        id: 2,
-        title: "",
+        {
+        id: 3,
+        title: "cnc 2d plotter",
+        thumbnail: "Img/cnc_san/thumb.jpeg",
+        description: "A small cnc 2d plotter made with the old dvd drive shield with small screw stepper motor and conected with aduino cnc shield and operated bu UGS G code uploder to the arduino board .",
+        
+        images: [ 
+            "Img/cnc_my/thumb.jpeg" ,
+            "Img/cnc_my/1.jpg",
+            
+            
+            
+            
+        ],
+        captions: [ 
+            "Full Modal", // Add matching captions
+            "OUTPUT",      // New caption
+        ],
+        steps: [
+            "Using the old dvd drive shield",
+            "Assembled the stepper motor with the shield",
+            "Connected the shield to the arduino cnc shield",
+            "Upload the code to the arduino board using Arduino IDE",
+            "Open the UGS G code uploader",
+            "Select the G code file to upload",
+            "Upload the G code to the arduino board",
+            "And now you can see the output in the cnc machine" 
+        ],
+        components: [
+
+            "Arduino Uno",
+            "CNC Shield",
+            "Stepper Motor ",
+            "Power supply(12v and 1A) for cnc machine", 
+            "UGS G code uploader",
+            "Old DVD Drive Shield", 
+            "Small Screw Stepper Motor",
+            "Arduino CNC Shield", 
+            "Aduino IDE", 
+            "G code file"
+        ],
+        category: "cnc",
+        tags: ["cnc", "arduino", "plotter"],
+        date: "2023-04-02",
+        codeLink: "",
+        videoLink: ""
+    },
+    /*
+   {
+        id:3 ,
+        title: "Small CNC 2d Plotter",
         thumbnail: "",
         description: "A small cnc 2d plotter made with the old dvd drive shield with small screw stepper motor and conected with aduino cnc shield and operated bu UGS G code uploder to the arduino board .",
         videos: [
@@ -131,12 +180,12 @@ const projects = [
         date: "2023-04-10",
         codeLink: "https://github.com/example/esp32-weather",
         videoLink: "https://youtube.com/example/esp32-weather"
-    },
-    {
-        id: 3,
-        title: "Raspberry Pi Pico Data Logger",
-        thumbnail: "https://via.placeholder.com/300x180?text=Pi+Pico+Logger",
-        description: "Data logging system using Raspberry Pi Pico that records sensor data to SD card with timestamp.",
+    },*/
+    /*{
+        id: 3   ,
+        title: "Small CNC 2d Plotter",
+        thumbnail: "Img/cnc_san/thumb.jpeg",
+        description: "A cnc 2d plotter using arduino and old dvd drive shield with small screw stepper motor and connected with Arduino CNC shield, operated by UGS G code uploader.",
         videos: [
             "https://example.com/videos/pico-datalogger.mp4"
         ],
@@ -164,7 +213,7 @@ const projects = [
         date: "2023-03-22",
         codeLink: "https://github.com/example/pico-datalogger",
         videoLink: "https://youtube.com/example/pico-datalogger"
-    },
+    },*/
     {
         id: 4,
         title: "CNC Router Controller",
